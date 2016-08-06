@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- MaterializeCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet" \>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="js/lib/angular-1.5.7.min.js"></script>
+
+    <!-- App -->
+    <script src="js/controllers/movieControllers.js"></script>
+    <script src="js/service/movie.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="movieApp">
+    <div class="container">
+        <div ng-controller="movieController">
+            <div class="row">
+                    <div class="col-sm-12 col-lg-3 col-md-6">
+                    <div class="thumbnail"><h5>
+                      <span class="card-title"> {{ movies.title }} </span></h5></br>
+                      <img class="poster" ng-src="{{ movies.image }}" alt="">
+                      <div class="caption text-center">
+                         <P>Released Year: {{ movies.year }}</P>
+                         <P>Genre: {{ movies.genre }}</P>
+                         <P>Actors: {{ movies.actors }}</P>
+                         <P>Director: {{ movies.director }}</P>
+                         <p>{{movies.story}}</p>
+                       
+                       </div>
+                       </div>
+                    
+                 </div>
+             </div>
+           </div>
+  </body>
+  </html>
