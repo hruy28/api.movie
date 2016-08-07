@@ -1,25 +1,21 @@
 function movieController($scope, movies) {
     
-    
+    $scope.filter;
     $scope.movies;
+    
 
       movies.getMovies().then(function (response) {
 
-               $scope.movies = {
-                    title: response.data.Title,
-                    image: response.data.Poster,
-                    year: response.data.Year,
-                    genre: response.data.Genre,
-                    actors: response.data.Actors,
-                    director: response.data.Director,
-                    story: response.data.Plot
-           
-                };
+               $scope.movies = response.data;
 
          
              }, function (error) {
 
                 console.error(error);
         });
-        
+               $scope.filter = function(key){
+               $scope.filteredMovies = $scope.movies.filter(function filterByName(movie){
+                       return movie.name.indexOf(key) !==-1;
+                     });
+};
 }

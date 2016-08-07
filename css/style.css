@@ -6,7 +6,19 @@
 }
 body {
   font-family: 'Kanit', sans-serif;
+
 }
+.search-button {
+   padding-top: 30px;
+
+}
+
+.search-bar {
+  width:100%;
+  max-width:500px;
+  margin-bottom: 25px;
+}
+
 .storyline {
   font-family: 'Kanit', sans-serif;
   margin-top : 0px;
